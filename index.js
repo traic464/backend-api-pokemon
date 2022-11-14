@@ -8,12 +8,12 @@ const votePokemon = require('./src/votePokemon')
 const getScorePokemon = require('./src/getScorePokemon')
 const auth = require('./middleware/auth')
 const cors = require('cors');
-// const corsOptions = {
-//     origin: 'http://localhost:3000',
-//     credentials: true,
-//   };
+ const corsOptions = {
+     origin: '*',
+     credentials: true,
+   };
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json())
 app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*")
