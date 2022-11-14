@@ -8,6 +8,10 @@ const votePokemon = require('./src/votePokemon')
 const getScorePokemon = require('./src/getScorePokemon')
 const auth = require('./middleware/auth')
 const cors = require('cors');
+// const corsOptions = {
+//     origin: 'http://localhost:3000',
+//     credentials: true,
+//   };
 
 app.use(cors());
 app.use(bodyParser.json())
