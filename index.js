@@ -7,7 +7,9 @@ const login = require('./src/login')
 const votePokemon = require('./src/votePokemon')
 const getScorePokemon = require('./src/getScorePokemon')
 const auth = require('./middleware/auth')
+const cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json())
 app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*")
