@@ -28,18 +28,18 @@ app.get('/hello', async (req, res) => {
     res.json("Hello westride")
 })
 
-app.post('/register', async (req, res) => {
-    register(req,res)
-})
+// app.post('/register', async (req, res) => {
+//     register(req,res)
+// })
 
-app.post('/login', async (req, res) => {
-    login(req,res)
-})
+// app.post('/login', async (req, res) => {
+//     login(req,res)
+// })
 
-app.post('/pokemon/vote', auth, async (req, res) => {
-    votePokemon(req,res)
-})
+// app.post('/pokemon/vote', auth, async (req, res) => {
+//     votePokemon(req,res)
+// })
 
-app.get('/pokemon/score/all', auth, async (req, res) => {
-    getScorePokemon(req,res)
-})
+// app.get('/pokemon/score/all', auth, async (req, res) => {
+//     getScorePokemon(req,res)
+// })
