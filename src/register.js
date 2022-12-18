@@ -10,7 +10,7 @@ const exec = async (req, res) => {
         let data = req.body
         console.log(data, "<<<< body");
 
-        let sqlUser = `SELECT * FROM public.user WHERE user_name = $1;`
+        let sqlUser = `SELECT * FROM public.users WHERE user_name = $1;`
         let paramUser = [data.userName]
         let responseUser = await pool.query(sqlUser, paramUser)
 
@@ -20,7 +20,7 @@ const exec = async (req, res) => {
         } else {
             let user_uuid = uuid();
             let encryptPwd = await common.commonService.encrypted(data.password)
-            let sql = `INSERT INTO public."user"
+            let sql = `INSERT INTO public."users"
             (user_uuid, first_name, last_name, user_name, "password", create_date, create_by)
             VALUES($1, $2, $3, $4, $5, now(), $6);
             `

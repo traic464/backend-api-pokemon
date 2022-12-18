@@ -8,7 +8,7 @@ const exec = async (req, res) => {
     try {
         let data = req.body //username, password
 
-        let sql = `SELECT * FROM public.user WHERE user_name = $1`
+        let sql = `SELECT * FROM public.users WHERE user_name = $1`
         let param = [data.userName]
         let responseUser = await pool.query(sql,param)
       
